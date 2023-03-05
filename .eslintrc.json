@@ -10,13 +10,13 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 12,
+    "ecmaVersion": 2022,
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
     "prettier/prettier": [
-      "error",
+      "warn",
       {
         "endOfLine": "auto"
       }
@@ -46,5 +46,7 @@
     "import/resolver": {
       "typescript": {}
     }
-  }
+  },
+  "ignorePatterns":["**/*.js", "node_modules", "build"]
+
 }
