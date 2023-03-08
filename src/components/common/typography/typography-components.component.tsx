@@ -6,9 +6,13 @@ import {
   FontWeight,
   Color,
   Breakpoints,
+<<<<<<< HEAD
 
 } from '../../../components/common/constants';
 
+=======
+} from '../constants';
+>>>>>>> ed66917 (solved import paths)
 
 interface TypographyProps {
   light?: boolean;
