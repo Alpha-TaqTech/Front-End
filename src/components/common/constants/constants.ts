@@ -20,6 +20,7 @@ export enum FontFamily {
 
 export enum FontWeight {
   Regular = 400,
+  Medium = 500,
 }
 
 export enum FontSizeDesktop {
@@ -36,4 +37,8 @@ export enum FontSizeMobile {
   Medium = '12px',
   Small = '10px',
   XSmall = '6px',
+}
+
+export enum Breakpoints {
+  Mobile = '600px',
 }
