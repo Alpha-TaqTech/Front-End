@@ -19,8 +19,10 @@
       "warn",
       {
         "endOfLine": "auto"
-      }
+      },
+      
     ],
+    "lines-between-class-members": ["error", "never"],
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "@typescript-eslint/explicit-module-boundary-types": "off",
