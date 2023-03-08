@@ -10,7 +10,7 @@ export const Home = () => (
     <div>
       <BodyText>Button with only icon</BodyText>
     </div>
-    <Button color="green" icon={<House size={18} color={Color.White} />} />
+    <Button color={Color.Green} icon={<House size={18} color={Color.White.base} />} />
     <br />
     <div>
       <BodyText>Button with only label</BodyText>
@@ -23,7 +23,7 @@ export const Home = () => (
     <Button
       color={Color.Red}
       label="Home"
-      icon={<House size={18} color={Color.White} />}
+      icon={<House size={18} color={Color.White.base} />}
     />
   </>
 );

@@ -14,7 +14,7 @@ interface TypographyProps {
 }
 
 export const BodyText = styled.p<TypographyProps>`
-  color: ${({ light }) => (light ? Color.White : Color.Black)};
+  color: ${({ light }) => (light ? Color.White.base : Color.Black.base)};
   font-family: ${FontFamily.Primary};
   font-weight: ${({medium}) => medium ? FontWeight.Medium : FontWeight.Regular};
   font-size: ${FontSizeMobile.Medium};
@@ -25,7 +25,7 @@ export const BodyText = styled.p<TypographyProps>`
 `;
 
 export const Label = styled.label<TypographyProps>`
-  color: ${({ light }) => (light ? Color.White : Color.Black)};
+  color: ${({ light }) => (light ? Color.White.base : Color.Black.base)};
   font-family: ${FontFamily.Primary};
   font-weight: ${({medium}) => medium ? FontWeight.Medium : FontWeight.Regular};
   font-size: ${FontSizeMobile.Medium  };
@@ -36,7 +36,7 @@ export const Label = styled.label<TypographyProps>`
 `;
 
 export const H1 = styled.h1<TypographyProps>`
-  color: ${({ light }) => (light ? Color.White : Color.Black)};
+  color: ${({ light }) => (light ? Color.White.base : Color.Black.base)};
   font-family: ${FontFamily.Primary};
   font-weight: ${({medium}) => medium ? FontWeight.Medium : FontWeight.Regular};
   font-size: ${FontSizeMobile.XLarge};
@@ -47,7 +47,7 @@ export const H1 = styled.h1<TypographyProps>`
 `;
 
 export const H2 = styled.h2<TypographyProps>`
-  color: ${({ light }) => (light ? Color.White : Color.Black)};
+  color: ${({ light }) => (light ? Color.White.base : Color.Black.base)};
   font-family: ${FontFamily.Primary};
   font-weight: ${({medium}) => medium ? FontWeight.Medium : FontWeight.Regular};
   font-size: ${FontSizeMobile.Large};
@@ -58,7 +58,7 @@ export const H2 = styled.h2<TypographyProps>`
 `;
 
 export const MiniLabel = styled.label<TypographyProps>`
-  color: ${({ light }) => (light ? Color.White : Color.Black)};
+  color: ${({ light }) => (light ? Color.White.base : Color.Black.base)};
   font-family: ${FontFamily.Primary};
   font-weight: ${({medium}) => medium ? FontWeight.Medium : FontWeight.Regular};
   font-size: ${FontSizeMobile.XSmall};
