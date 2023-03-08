@@ -34,7 +34,11 @@ export const Label = styled.label<TypographyProps>`
   color: ${({ light }) => (light ? Color.White.base : Color.Black.base)};
   font-family: ${FontFamily.Primary};
   font-weight: ${({medium}) => medium ? FontWeight.Medium : FontWeight.Regular};
+<<<<<<< HEAD
   font-size: ${FontSizeMobile.Medium  };
+=======
+  font-size: ${FontSizeDesktop.Small};
+>>>>>>> 9d4d445 (input styling)
 
   @media all and (min-width: ${Breakpoints.Mobile}) {
     font-size: ${FontSizeDesktop.Small};

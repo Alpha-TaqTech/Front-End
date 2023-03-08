@@ -1,4 +1,5 @@
 import { Label } from '../typography';
+import { TextField, TextInputWrapper } from './inputs-components.styled';
 
 interface TextInputProps {
   type?: 'text' | 'password' | 'email';
@@ -6,7 +7,10 @@ interface TextInputProps {
 }
 
 export const TextInput = ({ type, label }: TextInputProps) => {
-  <>
-    <Label>{label}</Label>
-  </>
+  return (
+    <TextInputWrapper>
+      <Label>{label}</Label>
+      <TextField type={type} />
+    </TextInputWrapper>
+  );
 };
