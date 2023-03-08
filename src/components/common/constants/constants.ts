@@ -15,7 +15,7 @@ export class Color {
 }
 
 export enum FontFamily {
-  Primary = 'Roboto',
+  Primary = 'Roboto mono, monospace',
 }
 
 export enum FontWeight {

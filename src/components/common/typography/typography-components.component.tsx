@@ -6,7 +6,7 @@ import {
   FontWeight,
   Color,
   Breakpoints,
-} from '@/components/common/constants';
+} from '../constants/constants';
 
 interface TypographyProps {
   light?: boolean;
@@ -28,7 +28,7 @@ export const Label = styled.label<TypographyProps>`
   color: ${({ light }) => (light ? Color.White : Color.Black)};
   font-family: ${FontFamily.Primary};
   font-weight: ${({medium}) => medium ? FontWeight.Medium : FontWeight.Regular};
-  font-size: ${FontSizeMobile.Small};
+  font-size: ${FontSizeMobile.Medium  };
 
   @media all and (min-width: ${Breakpoints.Mobile}) {
     font-size: ${FontSizeDesktop.Small};
