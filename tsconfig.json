@@ -18,7 +18,8 @@
       "outDir": "build",
       "baseUrl": "src",
       "paths": {
-        "":[""]
+        "@/*": ["./*"],
+        "@components": ["components/"],
       }
     },
     "include": ["src/**/*"],
