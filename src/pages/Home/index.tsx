@@ -2,6 +2,7 @@ import { Color } from '../../components/common/constants';
 import { House } from '@phosphor-icons/react';
 import { Button } from '../../components/Button/index';
 import { BodyText } from '../../components/common/typography/typography-components.component';
+import { Header } from '../../components/Header';
 
 export const Home = () => (
   <>
@@ -25,5 +26,9 @@ export const Home = () => (
       label="Home"
       icon={<House size={18} color={Color.White.base} />}
     />
+    <Header>
+      <Button color={Color.Gold} label="Entrar" />
+    </Header>
+    
   </>
 );
