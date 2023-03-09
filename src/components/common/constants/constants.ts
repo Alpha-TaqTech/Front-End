@@ -1,13 +1,42 @@
+export interface ColorType {
+  base: string;
+  hover: string;
+}
+
 export class Color {
-  public static readonly Black = { base: '#1F1923', hover: '#2F2A35' };
-  public static readonly White = { base: '#FFFFF0', hover: '#FFFFF0' };
-  public static readonly Grey = { base: '#9A9A95', hover: '#B2B2AD' };
-  public static readonly Coal = { base: '#36454F', hover: '#2F3E47' };
-  public static readonly Red = { base: '#B60000', hover: '#D60000' };
-  public static readonly Brown = { base: '#8B5A2B', hover: '#A66D3D' };
-  public static readonly DarkBrown = { base: '#9B2C1B', hover: '#B23D1C' };
-  public static readonly Gold = { base: '#D4AF37', hover: '#E6C04D' };
-  public static readonly Green = { base: '#1E760F', hover: '#2E8B1F' };
+  public static readonly Black: ColorType = {
+    base: '#1F1923',
+    hover: '#2F2A35',
+  };
+  public static readonly White: ColorType = {
+    base: '#FFFFF0',
+    hover: '#FFFFF0',
+  };
+  public static readonly Grey: ColorType = {
+    base: '#9A9A95',
+    hover: '#B2B2AD',
+  };
+  public static readonly Coal: ColorType = {
+    base: '#36454F',
+    hover: '#2F3E47',
+  };
+  public static readonly Red: ColorType = { base: '#B60000', hover: '#D60000' };
+  public static readonly Brown: ColorType = {
+    base: '#8B5A2B',
+    hover: '#A66D3D',
+  };
+  public static readonly DarkBrown: ColorType = {
+    base: '#9B2C1B',
+    hover: '#B23D1C',
+  };
+  public static readonly Gold: ColorType = {
+    base: '#D4AF37',
+    hover: '#E6C04D',
+  };
+  public static readonly Green: ColorType = {
+    base: '#1E760F',
+    hover: '#2E8B1F',
+  };
 
   public static readonly Background = { base: '#FEEFDA', hover: '#FEEFDA' };
   public static readonly TrasnparentBlack = {

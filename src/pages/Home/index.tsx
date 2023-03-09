@@ -21,7 +21,7 @@ export const Home = () => (
       <BodyText>Button with label and icon</BodyText>
     </div>
     <Button
-      color={Color.Red}
+      color={Color.Coal}
       label="Home"
       icon={<House size={18} color={Color.White.base} />}
     />

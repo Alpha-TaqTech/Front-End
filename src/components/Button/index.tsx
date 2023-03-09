@@ -1,10 +1,7 @@
+import { ColorType } from '../common/constants';
 import { Label } from '../common/typography';
 import { ButtonStyle } from './style';
 
-export interface ColorType {
-  base: string;
-  hover: string;
-}
 interface PropTypes {
   label?: string;
   onClick?: () => void;
@@ -14,7 +11,11 @@ interface PropTypes {
 
 export const Button = ({ label, onClick, color, icon }: PropTypes) => {
   return (
-    <ButtonStyle color={color} value={'Label'}>
+    <ButtonStyle
+      baseColor={color.base}
+      hoverColor={color.hover}
+      value={'Label'}
+    >
       {icon}
       {label && (
         <Label light medium>

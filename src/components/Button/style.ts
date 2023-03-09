@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import { ColorType } from '.';
 
-import { Color } from '../common/constants';
+
+import { Color, ColorType } from '../common/constants';
 
 interface ButtonTypes {
-  color: ColorType;
+  baseColor: string;
+  hoverColor: string;
 }
 
 export const ButtonStyle = styled.button<ButtonTypes>`
@@ -12,7 +13,7 @@ export const ButtonStyle = styled.button<ButtonTypes>`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.color.base};
+  background-color: ${(props) => props.baseColor};
   color: ${Color.White.base};
   border: solid rgba(0, 0, 0, 0.1) 2px;
   border-radius: 8px;
@@ -22,6 +23,6 @@ export const ButtonStyle = styled.button<ButtonTypes>`
 
   &:hover {
     cursor: pointer;
-    background-color: ${(props) => props.color.hover};
+    background-color: ${(props) => props.hoverColor};
   }
 `;
