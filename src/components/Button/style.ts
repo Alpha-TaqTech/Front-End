@@ -17,7 +17,7 @@ export const ButtonStyle = styled.button<ButtonTypes>`
   color: ${Color.White.base};
   border: solid rgba(0, 0, 0, 0.1) 2px;
   border-radius: 8px;
-  height: 40px;
+  height: 30px;
   padding: 0 18px;
   gap: 4px;
 
