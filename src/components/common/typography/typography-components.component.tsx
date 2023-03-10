@@ -6,7 +6,7 @@ import {
   FontWeight,
   Color,
   Breakpoints,
-} from '@/components/common/constants';
+} from '../../../components/common/constants';
 
 interface TypographyProps {
   light?: boolean;
