@@ -15,6 +15,7 @@ export const Button = ({ label, onClick, color, icon }: PropTypes) => {
       baseColor={color.base}
       hoverColor={color.hover}
       value={'Label'}
+      onClick={onClick}
     >
       {icon}
       {label && (

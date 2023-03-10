@@ -20,7 +20,6 @@ export const ButtonStyle = styled.button<ButtonTypes>`
   height: 30px;
   padding: 0 18px;
   gap: 4px;
-
   &:hover {
     cursor: pointer;
     background-color: ${(props) => props.hoverColor};
