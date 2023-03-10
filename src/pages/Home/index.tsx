@@ -7,7 +7,6 @@ import { Container } from '../../components/Container';
 import { Logo } from '../../assets/icons/logo';
 
 export const Home = () => {
-  console.log('Width: ', window.screen.availWidth, 'Height: ', window.innerHeight);
   
   return (
     <>
@@ -21,6 +20,7 @@ export const Home = () => {
           <Button label='Register' color={Color.Gold} />
         </Container>
       </Container>
+      
     </>
   );
 };
