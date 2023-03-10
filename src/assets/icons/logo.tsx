@@ -1,8 +1,13 @@
-export const Logo = () => {
+interface PropTypes {
+  width?: string;
+  height?: string;
+}
+
+export const Logo = ({width, height}: PropTypes) => {
   return (
     <svg
-      width="24"
-      height="28"
+      width={width || '20px'}
+      height={height || '20px'}
       viewBox="0 0 24 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
