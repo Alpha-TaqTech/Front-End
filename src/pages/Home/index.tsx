@@ -4,31 +4,37 @@ import { Button } from '../../components/Button/index';
 import { BodyText } from '../../components/common/typography/typography-components.component';
 import { Header } from '../../components/Header';
 
-export const Home = () => (
-  <>
-    <BodyText>Button Component</BodyText>
-    <br />
-    <div>
-      <BodyText>Button with only icon</BodyText>
-    </div>
-    <Button color={Color.Green} icon={<House size={18} color={Color.White.base} />} />
-    <br />
-    <div>
-      <BodyText>Button with only label</BodyText>
-    </div>
-    <Button color={Color.Gold} label="Label" />
-    <br />
-    <div>
-      <BodyText>Button with label and icon</BodyText>
-    </div>
-    <Button
-      color={Color.Coal}
-      label="Home"
-      icon={<House size={18} color={Color.White.base} />}
-    />
-    <Header>
-      <Button color={Color.Gold} label="Entrar" />
-    </Header>
-    
-  </>
-);
+export const Home = () => {
+  console.log('Width: ', window.screen.availWidth, 'Height: ', window.innerHeight);
+  
+  return (
+    <>
+      <BodyText>Button Component</BodyText>
+      <br />
+      <div>
+        <BodyText>Button with only icon</BodyText>
+      </div>
+      <Button
+        color={Color.Green}
+        icon={<House size={18} color={Color.White.base} />}
+      />
+      <br />
+      <div>
+        <BodyText>Button with only label</BodyText>
+      </div>
+      <Button color={Color.Gold} label="Label" />
+      <br />
+      <div>
+        <BodyText>Button with label and icon</BodyText>
+      </div>
+      <Button
+        color={Color.Coal}
+        label="Home"
+        icon={<House size={18} color={Color.White.base} />}
+      />
+      <Header>
+        <Button color={Color.Gold} label="Entrar" />
+      </Header>
+    </>
+  );
+};
