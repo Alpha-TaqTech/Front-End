@@ -27,7 +27,6 @@ export const Feed = () => {
 
   async function getPublications() {
     const { data } = await apiJSON.get<PublicationTypes[]>('/publications');
-    console.log(data);
     setPublications(data);
   }
 
