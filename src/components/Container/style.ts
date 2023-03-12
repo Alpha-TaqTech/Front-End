@@ -27,4 +27,5 @@ export const ContainerStyle = styled.div<ContainerProps>`
     gap: ${(props: ContainerProps) => props.gap || "0"};
     border: ${(props: ContainerProps) => props.border || "none"};
     overflow: ${(props: ContainerProps) => props.overflow || "auto"};
+    max-width: 500px;
 `
