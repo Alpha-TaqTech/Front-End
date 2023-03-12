@@ -21,13 +21,7 @@ export const Home = () => {
         <H1 light>Chat RPG</H1>
         <input type="text" placeholder="Username" />
         <input type="password" placeholder="Password" />
-        <Container
-          width="80%"
-          height="10%"
-          direction="row"
-          gap="12px"
-          backgroundColor="transparent"
-        >
+        
           <Button label="Login" color={Color.Green} />
           <Button
             label="Register"
@@ -35,7 +29,6 @@ export const Home = () => {
             onClick={() => navigate(encodeURL(['register']))}
           />
         </Container>
-      </Container>
     </>
   );
 };

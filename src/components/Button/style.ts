@@ -6,6 +6,7 @@ import { Color, ColorType } from '../common/constants';
 interface ButtonTypes {
   baseColor: string;
   hoverColor: string;
+  gap?: string;
 }
 
 export const ButtonStyle = styled.button<ButtonTypes>`
@@ -19,7 +20,7 @@ export const ButtonStyle = styled.button<ButtonTypes>`
   border-radius: 8px;
   height: 30px;
   padding: 0 18px;
-  gap: 4px;
+  gap: ${(props) => props.gap || '4px'};
   &:hover {
     cursor: pointer;
     background-color: ${(props) => props.hoverColor};
