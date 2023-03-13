@@ -23,6 +23,7 @@ export const TextField = styled.input<TextFieldProps>`
   border-radius: ${BorderRadius.Medium};
   background: ${Color.White.base};
   height: 30px;
+  padding: 0 5px;
   width: ${({ width }) => width ?? 240}px;
   outline: none;
 `;
