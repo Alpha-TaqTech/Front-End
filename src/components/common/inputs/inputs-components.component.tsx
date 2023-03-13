@@ -1,4 +1,3 @@
-import { useRef, RefObject } from 'react';
 import { Label } from '../typography';
 import {
   TextField,
@@ -10,32 +9,36 @@ import {
   SelectWrapper,
 } from './inputs-components.styled';
 
-interface TextInputProps {
+interface TextInputProps{
   type?: 'text' | 'password' | 'email';
+  placeholder?: string;
   label: string;
+  lightLabel?: boolean;
+
 }
 
 interface TextAreaInputProps extends TextAreaProps {
   label: string;
+  lightLabel?: boolean;
 }
 
 interface SelectInputProps {
   options: { name: string }[];
 }
 
-export const TextInput = ({ type, label }: TextInputProps) => {
+export const TextInput = ({ type, label, placeholder, lightLabel }: TextInputProps) => {
   return (
     <TextInputWrapper>
-      <Label>{label}</Label>
-      <TextField type={type} />
+      <Label light={lightLabel}>{label}</Label>
+      <TextField type={type} placeholder={placeholder} />
     </TextInputWrapper>
   );
 };
 
-export const TextAreaInput = ({ label, height, width }: TextAreaInputProps) => {
+export const TextAreaInput = ({ label, height, width, lightLabel }: TextAreaInputProps) => {
   return (
     <TextInputWrapper>
-      <Label>{label}</Label>
+      <Label light={lightLabel}>{label}</Label>
       <TextArea height={height} width={width} />
     </TextInputWrapper>
   );
