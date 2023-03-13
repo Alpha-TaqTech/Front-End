@@ -12,6 +12,8 @@ import {
 } from '../../components/common/typography';
 import { useEffect, useState } from 'react';
 import { api, apiJSON } from '../../libs/api';
+import { useNavigate } from 'react-router';
+import { encodeURL } from '../../helpers/URLNavigationReplace';
 
 interface PublicationTypes {
   title: string;
@@ -23,6 +25,7 @@ interface PublicationTypes {
 }
 
 export const Feed = () => {
+  const navigate = useNavigate();
   const [publications, setPublications] = useState<PublicationTypes[]>([]);
 
   async function getPublications() {
@@ -42,13 +45,17 @@ export const Feed = () => {
           icon={<House size={22} color={Color.White.base} />}
         />
       </Header>
-      <FeedStyle>
+      <Container height='50px'>
         <Button
           label="Criar Publicação"
           icon={<Plus size={16} weight="bold" color={Color.White.base} />}
           color={Color.Brown}
           gap="8px"
+          onClick={() => navigate(encodeURL(['create-game']))}
         />
+      </Container>
+
+      <Container height="" justify="start" padding="0 30px 30px 30px" gap='12px'>
         {publications.map((publication) => (
           <>
             <Container
@@ -57,18 +64,19 @@ export const Feed = () => {
               justify={'center'}
               padding={'10px 16px'}
               gap={'12px'}
+              overflow="none"
             >
               <Container
                 backgroundColor="transparent"
                 justify="space-between"
                 align="center"
                 direction="row"
-                height="50px"
-                overflow="hidden"
+                height="10%"
+                overflow="none"
               >
                 <H2>{publication.title}</H2>
                 <H2>
-                  {publication.playersAmount}/6{publication.playersLimit}
+                  {0}/{publication.playersLimit}
                 </H2>
               </Container>
               <Container
@@ -83,11 +91,11 @@ export const Feed = () => {
               </Container>
               <Container
                 direction="row"
-                height="60px"
+                height="20%"
                 gap="8px"
                 backgroundColor="transparent"
                 align="start"
-                overflow="hidden"
+                overflow="none"
               >
                 <span>
                   <Button label="Curtir" color={Color.Green} />
@@ -103,7 +111,7 @@ export const Feed = () => {
             </Container>
           </>
         ))}
-      </FeedStyle>
+      </Container>
     </>
   );
 };

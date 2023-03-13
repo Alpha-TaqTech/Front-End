@@ -35,7 +35,7 @@ export const Register = () => {
 
   return (
     <>
-      <Container width="90vw" height="60vh" gap="12px">
+      <Container width="90vw" height="60vh" gap="12px" backgroundColor='rgba(31, 25, 35, 0.5)' padding='20px'>
         <Logo width="95px" height="108px" />
         <H1 light>Chat RPG</H1>
         <input type="text" placeholder="First Name" />
@@ -50,6 +50,7 @@ export const Register = () => {
           direction="row"
           gap="12px"
           backgroundColor="transparent"
+          overflow='none'
         >
           <Button
             label="Fazer Login"

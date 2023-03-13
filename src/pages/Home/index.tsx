@@ -16,7 +16,7 @@ export const Home = () => {
 
   return (
     <>
-      <Container width="90vw" height="60vh" gap="12px">
+      <Container width="90vw" height="60vh" gap="12px" backgroundColor='rgba(31, 25, 35, 0.5)'>
         <Logo width="95px" height="108px" />
         <H1 light>Chat RPG</H1>
         <input type="text" placeholder="Username" />
