@@ -76,7 +76,7 @@ export const Feed = () => {
               >
                 <H2>{publication.title}</H2>
                 <H2>
-                  {0}/{publication.playersLimit}
+                  {publication.playersAmount}/{publication.playersLimit}
                 </H2>
               </Container>
               <Container

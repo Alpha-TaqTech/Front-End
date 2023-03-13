@@ -13,6 +13,7 @@ import { encodeURL } from '../../helpers/URLNavigationReplace';
 interface CreateGameProps {
   title: string;
   playersLimit: number;
+  playersAmount: number;
   characters: string[];
   description: string;
 }
@@ -22,6 +23,7 @@ export const CreateGame = () => {
   const [gameProperties, setGameProperties] = useState<CreateGameProps>({
     title: '',
     playersLimit: 0,
+    playersAmount: 0,
     characters: [],
     description: '',
   });
