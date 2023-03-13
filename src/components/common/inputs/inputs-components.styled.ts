@@ -7,12 +7,14 @@ import {
   FontSizeMobile,
 } from '../constants';
 
+import SelectArrowDown from '../../../assets/icons/select-arrow-down';
+
 interface TextFieldProps {
   width?: number;
 }
 
-interface TextAreaProps extends TextFieldProps {
-  height: number;
+export interface TextAreaProps extends TextFieldProps {
+  height?: number;
 }
 
 export const TextField = styled.input<TextFieldProps>`
@@ -33,7 +35,7 @@ export const TextArea = styled.textarea<TextAreaProps>`
   border-radius: ${BorderRadius.Medium};
   background: ${Color.White};
   width: ${({ width }) => width ?? 240}px;
-  height: ${({height}) => height ?? 90}px;
+  height: ${({ height }) => height ?? 90}px;
   resize: none;
   outline: none;
 `;
@@ -41,4 +43,24 @@ export const TextArea = styled.textarea<TextAreaProps>`
 export const TextInputWrapper = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const SelectWrapper = styled.div`
+  position: relative;
+  padding: 4px;
+  border: 1px solid ${Color.Black};
+  border-radius: ${BorderRadius.Medium};
+  width: fit-content;
+  background: ${Color.White};
+`;
+
+export const SelectStyled = styled.select`
+  background: none;
+  border: none;
+  appearance: none;
+  outline: none;
+`;
+
+export const SelectIconStyled = styled(SelectArrowDown)`
+  position: absolute;
 `;
