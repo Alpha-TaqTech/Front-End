@@ -37,12 +37,12 @@ export const Register = () => {
       <Container width="90vw" height="98vh" gap="12px">
         <Logo width="95px" height="108px" />
         <H1 light>Chat RPG</H1>
-        <TextInput label="Nome" />
-        <TextInput label="Sobrenome" />
-        <TextInput label="Username" />
-        <TextInput label="Email" type="email" />
-        <TextInput label="Senha" type="password" />
-        <TextInput label="Confirmar senha" type="password" />
+        <TextInput label="Nome" lightLabel />
+        <TextInput label="Sobrenome" lightLabel />
+        <TextInput label="Username" lightLabel />
+        <TextInput label="Email" type="email" lightLabel />
+        <TextInput label="Senha" type="password" lightLabel />
+        <TextInput label="Confirmar senha" type="password" lightLabel />
         <Container
           width="80%"
           height="10%"
