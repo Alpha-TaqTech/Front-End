@@ -12,6 +12,7 @@ interface ContainerProps {
     gap?: string;
     border?: string;
     overflow?: string;
+    flexWrap?: string;
 }
 
 export const ContainerStyle = styled.div<ContainerProps>`
@@ -22,10 +23,11 @@ export const ContainerStyle = styled.div<ContainerProps>`
     justify-content: ${(props: ContainerProps) => props.justify || "center"};
     align-items: ${(props: ContainerProps) => props.align || "center"};
     flex-direction: ${(props: ContainerProps) => props.direction || "column"};
-    background-color: ${(props: ContainerProps) => props.backgroundColor || "rgba(31, 25, 35, 0.5)"};
+    background-color: ${(props: ContainerProps) => props.backgroundColor || "transparent"};
     border-radius: 8px;
     gap: ${(props: ContainerProps) => props.gap || "0"};
     border: ${(props: ContainerProps) => props.border || "none"};
     overflow: ${(props: ContainerProps) => props.overflow || "auto"};
     max-width: 500px;
+    flex-wrap: ${(props: ContainerProps) => props.direction === "row" ? "wrap" : "nowrap"};
 `
