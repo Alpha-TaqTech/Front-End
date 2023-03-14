@@ -74,3 +74,8 @@ export enum FontSizeMobile {
 export enum Breakpoints {
   Mobile = '600px',
 }
+
+export enum BorderRadius {
+  Medium = '8px',
+  Large = '12px',
+}
