@@ -12,6 +12,7 @@ import { Container } from '../../components/Container';
 import { Logo } from '../../assets/icons/logo';
 import { encodeURL } from '../../helpers/URLNavigationReplace';
 import { useEffect, useState } from 'react';
+import { TextInput } from '../../components/common/inputs';
 
 interface UserTypes {
   email: string;
@@ -28,28 +29,27 @@ interface PropTypes {
   user: UserTypes | null;
 }
 
-
 export const Register = () => {
   const navigate = useNavigate();
 
-
   return (
     <>
-      <Container width="90vw" height="60vh" gap="12px">
+      <Container width="90vw" height="90vh" gap="12px" backgroundColor='rgba(31, 25, 35, 0.5)' padding='20px' justify='start'>
         <Logo width="95px" height="108px" />
         <H1 light>Chat RPG</H1>
-        <input type="text" placeholder="First Name" />
-        <input type="text" placeholder="Last Name" />
-        <input type="text" placeholder="Username" />
-        <input type="text" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <input type="password" placeholder="Password" />
+        <TextInput label="Nome" lightLabel />
+        <TextInput label="Sobrenome" lightLabel />
+        <TextInput label="Username" lightLabel />
+        <TextInput label="Email" type="email" lightLabel />
+        <TextInput label="Senha" type="password" lightLabel />
+        <TextInput label="Confirmar senha" type="password" lightLabel />
         <Container
           width="80%"
           height="10%"
           direction="row"
           gap="12px"
           backgroundColor="transparent"
+          overflow='none'
         >
           <Button
             label="Fazer Login"
