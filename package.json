@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --host --port 3000",
     "lint": "eslint --ext .js,.tsx src",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test": "npm run type-check && npm run lint && npm run dev"
+
   },
   "repository": {
     "type": "git",
